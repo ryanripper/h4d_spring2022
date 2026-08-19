@@ -1,0 +1,17 @@
+# Data wrangling
+pandas
+numpy
+
+# Visualization
+matplotlib
+plotnine
+missingno
+
+# Machine learning
+# scikit-learn supplies KMeans and TSNE; pycaret supplies the Isolation Forest
+# used for anomaly detection (pycaret.anomaly).
+scikit-learn
+pycaret
+
+# Notebook environment
+jupyter
