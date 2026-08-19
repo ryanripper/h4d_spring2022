@@ -1,4 +1,4 @@
-# hacking_for_defense_spring2022
+# h4d_spring2022
 
 **National Security Agency Cybersecurity Collaboration Center: An Effort to Create a Cybersecurity Risk Evaluation Metric**
 
@@ -59,17 +59,19 @@ The anomaly detector's hits correlated strongly with subaward *description* — 
 
 ## Requirements
 
+**Python 3.8 required.** Dependencies are pinned to the versions the analysis was originally run with (April 2022) — in particular `pycaret==2.3.5`, whose API (`setup(..., silent=True)`) was removed in PyCaret 3.x, so a newer stack will not run these notebooks as written.
+
 ```bash
 pip install -r requirements.txt
 ```
 
-`pycaret.anomaly` supplies the Isolation Forest used for anomaly detection; the rest is standard PyData plus `plotnine` (ggplot2 grammar) and `missingno` (missingness visualization).
+`pycaret.anomaly` supplies the Isolation Forest used for anomaly detection; the rest is standard PyData plus `plotnine` (ggplot2 grammar) and `missingno` (missingness visualization). If you just want to read the results, every notebook has a pre-rendered `.html` next to it — no install needed.
 
 ## Setup
 
 ```bash
-git clone https://github.com/ryanripper/hacking_for_defense_spring2022.git
-cd hacking_for_defense_spring2022
+git clone https://github.com/ryanripper/h4d_spring2022.git
+cd h4d_spring2022
 git lfs pull          # H4D_data.zip is tracked with Git LFS
 unzip H4D_data.zip
 ```
@@ -96,7 +98,6 @@ Then open any notebook with `jupyter lab` / `jupyter notebook`. Every notebook a
 │   ├── Ryan_Ripper_Final_Project.html         # Rendered version
 │   ├── Ryan_Ripper_Final_Project_Plan.pdf/.docx
 │   ├── Final_Project_Discussion.docx
-│   ├── Ryan_Ripper_Final_Project/             # Submitted bundle (notebook + html + zip)
 │   └── NSA_Presentation/
 │       ├── Ryan_Ripper_Final_Project.pptx     # Slide deck
 │       └── Screenshots/                       # Supporting screenshots
@@ -104,10 +105,8 @@ Then open any notebook with `jupyter lab` / `jupyter notebook`. Every notebook a
 │   ├── h4d_prelim_analysis/                   # 3/30/22 — Raytheon hypersonic case study
 │   ├── h4d_followup_analysis/                 # 4/7/22 — top descriptions & companies, all + hypersonic
 │   ├── h4d_ml_analysis/                       # 4/26/22 — K-Means, t-SNE, Isolation Forest
-│   │   ├── results/anomaly_plot.html          # 3D t-SNE outlier plot
-│   │   ├── tsne                               # Raw PyCaret plot_model(save=True) output (HTML, 3.6 MB)
-│   │   └── logs.log                           # PyCaret run log
-│   └── Hacking for Defense - 3:23:22.docx     # Meeting notes
+│   │   └── results/anomaly_plot.html          # 3D t-SNE outlier plot
+│   └── Hacking for Defense - 3-23-22.docx     # Meeting notes
 ├── H4D_data.zip                               # USAspending CY 2021 subawards (Git LFS)
 ├── requirements.txt
 └── README.md
