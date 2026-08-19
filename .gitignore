@@ -1,2 +1,13 @@
+# macOS
 .DS_Store
+__MACOSX/
+
+# Jupyter
 .ipynb_checkpoints
+
+# Generated logs (PyCaret, etc.)
+*.log
+catboost_info/
+
+# Unzipped data (ships as H4D_data.zip via Git LFS)
+data/
