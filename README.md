@@ -59,13 +59,11 @@ The anomaly detector's hits correlated strongly with subaward *description* — 
 
 ## Requirements
 
-No `requirements.txt` is committed. The notebooks import:
-
 ```bash
-pip install pandas numpy matplotlib scikit-learn plotnine missingno pycaret
+pip install -r requirements.txt
 ```
 
-`pycaret.anomaly` is used for the Isolation Forest; the rest is standard PyData plus `plotnine` (ggplot2 grammar) and `missingno` (missingness visualization).
+`pycaret.anomaly` supplies the Isolation Forest used for anomaly detection; the rest is standard PyData plus `plotnine` (ggplot2 grammar) and `missingno` (missingness visualization).
 
 ## Setup
 
@@ -111,6 +109,7 @@ Then open any notebook with `jupyter lab` / `jupyter notebook`. Every notebook a
 │   │   └── logs.log                           # PyCaret run log
 │   └── Hacking for Defense - 3:23:22.docx     # Meeting notes
 ├── H4D_data.zip                               # USAspending CY 2021 subawards (Git LFS)
+├── requirements.txt
 └── README.md
 ```
 
