@@ -1,17 +1,22 @@
+# Pinned to the versions the original analysis was run with (recorded in the
+# PyCaret run log at analysis time, April 2022). Requires Python 3.8 —
+# newer Python versions cannot install several of these pins.
+
 # Data wrangling
-pandas
-numpy
+pandas==1.3.3
+numpy==1.19.5
 
 # Visualization
-matplotlib
-plotnine
-missingno
+matplotlib==3.5.1
+plotnine==0.8.0
+missingno==0.5.1
 
 # Machine learning
 # scikit-learn supplies KMeans and TSNE; pycaret supplies the Isolation Forest
 # used for anomaly detection (pycaret.anomaly).
-scikit-learn
-pycaret
+scikit-learn==0.23.2
+pycaret==2.3.5
+lightgbm==3.3.2
 
 # Notebook environment
 jupyter
